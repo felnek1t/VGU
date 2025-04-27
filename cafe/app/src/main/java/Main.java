@@ -1,23 +1,13 @@
-/*
-Постановка задачи:
-Создать программу для управления заказами в кафе. Программа должна:
-- Позволять создавать заказы с указанием номера стола и добавлять в них блюда.
-- Каждое блюдо имеет название и цену.
-- Рассчитывать общую стоимость заказа.
-- Выводить информацию о заказе.
-- Использовать классы Dish, Order, Cafe и Main для реализации функционала.
+package app.src.main.java;
 
-Дополнительные улучшения:
-- Возможность удалять блюда из заказа по названию.
-- Проверка на дубликаты при добавлении блюд.
-- Вывод статистики по заказу (количество блюд и средняя стоимость).
-*/
-import ch.qos.logback.classic.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import core.src.main.java.dish.Dish;
+import core.src.main.java.order.Order;
+import core.src.main.java.cafe.Cafe;
 
 public class Main {
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
-
+    private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
         logger.info("Starting Cafe Order System");
         Cafe cafe = new Cafe();

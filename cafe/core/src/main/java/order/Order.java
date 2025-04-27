@@ -1,11 +1,14 @@
-import ch.qos.logback.classic.Logger;
-import org.slf4j.LoggerFactory;
+package core.src.main.java.order;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import core.src.main.java.dish.Dish;
 
 public class Order {
-    private static final Logger logger = LoggerFactory.getLogger(Order.class);
+    private static final Logger logger = LogManager.getLogger(Order.class);
     private int tableNumber;
     private List<Dish> dishes;
 
