@@ -1,7 +1,14 @@
+package core.src.main.java.order;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
+import core.src.main.java.dish.Dish;
 
 public class Order {
+    private static final Logger logger = LogManager.getLogger(Order.class);
     private int tableNumber;
     private List<Dish> dishes;
 
@@ -14,12 +21,12 @@ public class Order {
         // Проверка на дубликаты
         for (Dish existingDish : dishes) {
             if (existingDish.getName().equalsIgnoreCase(dish.getName())) {
-                System.out.println("Dish \"" + dish.getName() + "\" already exists in the order.");
+                logger.warn("Dish \"{}\" already exists in the order.", dish.getName());
                 return false;
             }
         }
         dishes.add(dish);
-        System.out.println("Added dish: " + dish);
+        logger.info("Added dish: {}", dish);
         return true;
     }
 
@@ -27,11 +34,11 @@ public class Order {
         for (Dish dish : dishes) {
             if (dish.getName().equalsIgnoreCase(dishName)) {
                 dishes.remove(dish);
-                System.out.println("Removed dish: " + dish);
+                logger.info("Removed dish: {}", dish);
                 return true;
             }
         }
-        System.out.println("Dish \"" + dishName + "\" not found in the order.");
+        logger.warn("Dish \"{}\" not found in the order.", dishName);
         return false;
     }
 
