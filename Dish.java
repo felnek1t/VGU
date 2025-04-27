@@ -1,5 +1,3 @@
-package core.src.main.java.dish;
-
 public class Dish {
     private String name;
     private double price;
@@ -19,6 +17,6 @@ public class Dish {
 
     @Override
     public String toString() {
-        return name + " (" + price + ".rub)";
+        return name + " (" + price + ".руб)";
     }
 }
