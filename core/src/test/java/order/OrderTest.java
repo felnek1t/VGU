@@ -18,7 +18,8 @@ public class OrderTest {
     @BeforeEach
     void setUp() {
         menu = Mockito.mock(Menu.class);
-        order = new Order(1, menu);
+        order = new Order(1);
+        order.setMenu(menu); 
         dish = new Dish("Pasta", 10.0);
     }
 
