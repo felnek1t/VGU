@@ -1,12 +1,12 @@
-package core.src.main.java.cafe;
+package cafe;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import core.src.main.java.order.Order;
-import core.src.main.java.dish.Dish;
+import order.Order;
+import dish.Dish;
 
 public class Cafe {
     private static final Logger logger = LogManager.getLogger(Cafe.class);
@@ -42,4 +42,8 @@ public class Cafe {
         }
         logger.warn("No order found for table {}", tableNumber);
     }
+	
+	public int getOrdersCount() {
+		return orders.size();
+	}
 }

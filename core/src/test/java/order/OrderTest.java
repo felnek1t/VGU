@@ -1,8 +1,8 @@
-package core.src.test.java.order;
+package ordertest;
 
-import core.src.main.java.dish.Dish;
-import core.src.main.java.menu.Menu;
-import core.src.main.java.order.Order;
+import dish.Dish;
+import menu.Menu;
+import order.Order;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -18,7 +18,8 @@ public class OrderTest {
     @BeforeEach
     void setUp() {
         menu = Mockito.mock(Menu.class);
-        order = new Order(1, menu);
+        order = new Order(1);
+        order.setMenu(menu); 
         dish = new Dish("Pasta", 10.0);
     }
 

@@ -1,4 +1,4 @@
-package core.src.main.java.dish;
+package dish;
 
 public class Dish {
     private String name;
