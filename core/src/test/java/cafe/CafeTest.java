@@ -1,7 +1,7 @@
 package cafetest;
 
 import cafe.Cafe;
-import order.OrderInterface;
+import orderinterface.OrderInterface;
 import dish.Dish;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
