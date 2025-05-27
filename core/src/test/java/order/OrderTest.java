@@ -1,4 +1,4 @@
-package OrderTest;
+package ordertest;
 
 import dish.Dish;
 import menu.Menu;

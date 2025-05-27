@@ -1,11 +1,11 @@
-package core.src.main.java.order;
+package order;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import core.src.main.java.dish.Dish;
+import dish.Dish;
 
 public class Order {
     private static final Logger logger = LogManager.getLogger(Order.class);

@@ -1,4 +1,4 @@
-package menu;
+package menutest;
 
 import dish.Dish;
 import menu.Menu;

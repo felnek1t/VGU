@@ -1,4 +1,4 @@
-package CafeTest;
+package cafetest;
 
 import cafe.Cafe;
 import order.OrderInterface;
