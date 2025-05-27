@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 import dish.Dish;
+import menu.Menu;
 
 public class Order {
     private static final Logger logger = LogManager.getLogger(Order.class);

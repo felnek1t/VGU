@@ -1,6 +1,5 @@
-package orderinterface;
+package order; 
 
-import order.OrderInterface;
 import dish.Dish;
 import java.util.List;
 
