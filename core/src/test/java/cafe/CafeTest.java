@@ -1,8 +1,8 @@
 package CafeTest;
 
-import core.src.main.java.cafe.Cafe;
-import core.src.main.java.order.OrderInterface;
-import core.src.main.java.dish.Dish;
+import cafe.Cafe;
+import order.OrderInterface;
+import dish.Dish;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
