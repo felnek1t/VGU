@@ -1,4 +1,4 @@
-package core.src.test.java.cafe;
+package CafeTest;
 
 import core.src.main.java.cafe.Cafe;
 import core.src.main.java.order.OrderInterface;

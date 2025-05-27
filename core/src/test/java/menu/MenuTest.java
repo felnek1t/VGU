@@ -1,4 +1,4 @@
-package core.src.test.java.menu;
+package MenuTest;
 
 import core.src.main.java.dish.Dish;
 import core.src.main.java.menu.Menu;
