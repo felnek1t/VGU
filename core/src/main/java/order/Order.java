@@ -11,13 +11,21 @@ public class Order {
     private static final Logger logger = LogManager.getLogger(Order.class);
     private int tableNumber;
     private List<Dish> dishes;
+	private Menu menu;
 
     public Order(int tableNumber) {
         this.tableNumber = tableNumber;
         this.dishes = new ArrayList<>();
     }
+	public void setMenu(Menu menu) {
+			this.menu = menu;
+		}
 
     public boolean addDish(Dish dish) {
+		if (menu != null && !menu.isDishAvailable(dish.getName())) {
+            return false;
+        }
+		
         // Проверка на дубликаты
         for (Dish existingDish : dishes) {
             if (existingDish.getName().equalsIgnoreCase(dish.getName())) {

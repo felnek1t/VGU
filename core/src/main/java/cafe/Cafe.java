@@ -42,4 +42,8 @@ public class Cafe {
         }
         logger.warn("No order found for table {}", tableNumber);
     }
+	
+	public int getOrdersCount() {
+		return orders.size();
+	}
 }
