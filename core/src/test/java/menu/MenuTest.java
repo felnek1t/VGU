@@ -1,7 +1,7 @@
-package core.src.test.java.menu;
+package menutest;
 
-import core.src.main.java.dish.Dish;
-import core.src.main.java.menu.Menu;
+import dish.Dish;
+import menu.Menu;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

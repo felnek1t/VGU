@@ -1,7 +1,7 @@
-package core.src.main.java.order;
+package order; 
 
+import dish.Dish;
 import java.util.List;
-import core.src.main.java.dish.Dish;
 
 public interface OrderInterface {
     boolean addDish(Dish dish);

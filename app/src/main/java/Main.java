@@ -1,10 +1,10 @@
-package app.src.main.java;
+package main;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import core.src.main.java.dish.Dish;
-import core.src.main.java.order.Order;
-import core.src.main.java.cafe.Cafe;
+import dish.Dish;
+import order.Order;
+import cafe.Cafe;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
