@@ -15,18 +15,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CafeTest {
     private Cafe cafe;
-    private OrderInterface order;
+    private OrderInterface orderinterface;
 
     @BeforeEach
     void setUp() {
         cafe = new Cafe();
-        order = Mockito.mock(OrderInterface.class);
+        orderinterface = Mockito.mock(OrderInterface.class);
     }
 
     @Test
     void testCreateOrder() throws NoSuchFieldException, IllegalAccessException {
-        Mockito.when(order.getTableNumber()).thenReturn(1);
-        cafe.createOrder(order);
+        Mockito.when(orderinterface.getTableNumber()).thenReturn(1);
+        cafe.createOrder(orderinterface);
 
         Field ordersField = Cafe.class.getDeclaredField("orders");
         ordersField.setAccessible(true);
@@ -36,9 +36,9 @@ public class CafeTest {
 
     @Test
     void testDisplayOrderDetails_EmptyOrder() {
-        Mockito.when(order.getTableNumber()).thenReturn(1);
-        Mockito.when(order.getDishes()).thenReturn(Collections.emptyList());
-        cafe.createOrder(order);
+        Mockito.when(orderinterface.getTableNumber()).thenReturn(1);
+        Mockito.when(orderinterface.getDishes()).thenReturn(Collections.emptyList());
+        cafe.createOrder(orderinterface);
         cafe.displayOrderDetails(1);
     }
 
@@ -48,12 +48,12 @@ public class CafeTest {
     }
     @Test
     void testDisplayOrderDetails_WithDishes() {
-        Mockito.when(order.getTableNumber()).thenReturn(1);
-        Mockito.when(order.getDishes()).thenReturn(
+        Mockito.when(orderinterface.getTableNumber()).thenReturn(1);
+        Mockito.when(orderinterface.getDishes()).thenReturn(
                 List.of(new Dish("Pizza", 10.0), new Dish("Pasta", 8.0))
         );
-        Mockito.when(order.calculateTotal()).thenReturn(18.0);
-        cafe.createOrder(order);
+        Mockito.when(orderinterface.calculateTotal()).thenReturn(18.0);
+        cafe.createOrder(orderinterface);
         cafe.displayOrderDetails(1);
     }
 }
