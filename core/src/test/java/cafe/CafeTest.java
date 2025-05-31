@@ -28,7 +28,8 @@ public class CafeTest {
 
     @Test
     void testDisplayOrderDetails_EmptyOrder() {
-        Mockito.when(order.getTableNumber()).thenReturn(1);
+        Mockito.when(order.getTableNumber()).thenReturn(0);
+        Mockito.when(order.getDishes()).thenReturn(List.of());
         cafe.createOrder(order);
         cafe.displayOrderDetails(1);
     }

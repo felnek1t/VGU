@@ -12,6 +12,9 @@ public class Menu {
     private List<Dish> dishes;
 
     public Menu() {
+        if (this.dishes.isEmpty()) {
+            throw new RuntimeException("empty");
+        }
         this.dishes = new ArrayList<>();
     }
 
