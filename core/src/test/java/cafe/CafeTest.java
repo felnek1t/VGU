@@ -34,7 +34,7 @@ public class CafeTest {
     }
     @Test
     void testDisplayOrderDetails_OrdernotFound() {
-        cafe.displayOderdDetails(1)
+        cafe.displayOderdDetails(1);
     }
     @Test
     void testDisplayOrderDetails_WithDishes() {
