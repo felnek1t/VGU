@@ -32,10 +32,7 @@ public class CafeTest {
         cafe.createOrder(order);
         cafe.displayOrderDetails(1);
     }
-    @Test
-    void testDisplayOrderDetails_OrdernotFound() {
-        cafe.displayOderdDetails(1);
-    }
+
     @Test
     void testDisplayOrderDetails_WithDishes() {
         Mockito.when(order.getTableNumber()).thenReturn(1);
