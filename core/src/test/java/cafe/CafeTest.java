@@ -28,13 +28,14 @@ public class CafeTest {
 
     @Test
     void testDisplayOrderDetails_EmptyOrder() {
-        Mockito.when(order.getTableNumber()).thenReturn(0);
-        Mockito.when(order.getDishes()).thenReturn(Collections.emptyList());
+        Mockito.when(order.getTableNumber()).thenReturn(1);
         cafe.createOrder(order);
         cafe.displayOrderDetails(1);
-        veryfy(order).geDishes();
     }
-
+    @Test
+    void testDisplayOrderDetails_OrdernotFound() {
+        cafe.displayOderdDetails(1)
+    }
     @Test
     void testDisplayOrderDetails_WithDishes() {
         Mockito.when(order.getTableNumber()).thenReturn(1);
